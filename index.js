@@ -32,4 +32,4 @@ require("./routes/authRoutes")(app);
 // const PORT = process.env.PORT => when heroku run the app it has ability to inject environment variables, these variables are that are setup run time that node are runing on the top of, that some thing heroku want to tell us after we deploy our app
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT);
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
