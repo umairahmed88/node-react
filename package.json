@@ -9,8 +9,8 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
-    "client": "yarn start --prefix client",
-    "dev": "concurrently \"yarn run server\" \"yarn run client\""
+    "client": "yarn --cwd ./client run start",
+    "dev": "concurrently -k \"yarn run server\" \"yarn run client\""
   },
   "license": "MIT",
   "dependencies": {
